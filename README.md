@@ -133,10 +133,3 @@ flowchart LR
   Graph --> Summary[Structured Incident Summary]
 ```
 
-## Talking Points For Judges
-
-- `log_agent`, `metric_agent`, `alert_agent`, `runbook_agent`, `root_cause_agent`, and `summary_agent` are LangGraph nodes.
-- Each node appends to `trace`, so the demo can walk through state transitions.
-- Tools are LangChain `@tool` functions, not plain helper methods.
-- RAG grounds the final answer in sample log and runbook documents.
-- Spring Boot acts as the backend microservice/API layer and invokes the orchestration service over REST.

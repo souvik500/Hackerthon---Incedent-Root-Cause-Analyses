@@ -1,0 +1,11 @@
+[
+  {
+    "incident_id": "INC-1001",
+    "severity": "SEV2",
+    "service": "checkout-api",
+    "title": "Checkout error rate and latency spike",
+    "started_at": "2026-05-16T10:03:00Z",
+    "signals": ["p95 latency > 4s", "HTTP 503 from payment-service", "payment authorization failures"]
+  }
+]
+

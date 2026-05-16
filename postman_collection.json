@@ -1,0 +1,68 @@
+{
+  "info": {
+    "name": "Incident AI RCA MVP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Backend Health",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/incidents/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "incidents", "health"]
+        }
+      }
+    },
+    {
+      "name": "Analyze Incident via Spring Boot",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"incidentId\": \"INC-1001\",\n  \"query\": \"Checkout latency and payment failures\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/incidents/analyze",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "incidents", "analyze"]
+        }
+      }
+    },
+    {
+      "name": "Analyze Incident Direct AI Service",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"incident_id\": \"INC-1001\",\n  \"query\": \"Checkout latency and payment failures\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/analyze",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["analyze"]
+        }
+      }
+    }
+  ]
+}
+

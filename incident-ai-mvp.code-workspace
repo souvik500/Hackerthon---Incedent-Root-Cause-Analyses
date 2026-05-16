@@ -1,0 +1,30 @@
+{
+  "folders": [
+    {
+      "name": "incident-ai-mvp",
+      "path": "."
+    },
+    {
+      "name": "backend-spring-boot",
+      "path": "backend"
+    },
+    {
+      "name": "ai-service-langgraph",
+      "path": "ai-service"
+    }
+  ],
+  "settings": {
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "python.defaultInterpreterPath": "${workspaceFolder:ai-service-langgraph}/.venv/Scripts/python.exe",
+    "terminal.integrated.defaultProfile.windows": "PowerShell"
+  },
+  "extensions": {
+    "recommendations": [
+      "vscjava.vscode-java-pack",
+      "pivotal.vscode-spring-boot",
+      "ms-python.python",
+      "humao.rest-client"
+    ]
+  }
+}
+

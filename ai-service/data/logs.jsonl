@@ -1,0 +1,9 @@
+{"timestamp":"2026-05-16T10:01:02Z","service":"checkout-api","level":"INFO","message":"Checkout request started","trace_id":"tr-901","latency_ms":180}
+{"timestamp":"2026-05-16T10:02:11Z","service":"payment-service","level":"WARN","message":"Payment provider timeout after 2500ms","trace_id":"tr-902","latency_ms":2510}
+{"timestamp":"2026-05-16T10:03:18Z","service":"checkout-api","level":"ERROR","message":"Payment authorization failed: upstream timeout","trace_id":"tr-902","latency_ms":3100}
+{"timestamp":"2026-05-16T10:04:05Z","service":"inventory-service","level":"INFO","message":"Inventory reserved successfully","trace_id":"tr-903","latency_ms":95}
+{"timestamp":"2026-05-16T10:05:42Z","service":"payment-service","level":"ERROR","message":"Database connection pool exhausted for payment ledger","trace_id":"tr-904","latency_ms":4300}
+{"timestamp":"2026-05-16T10:06:07Z","service":"checkout-api","level":"ERROR","message":"Checkout failed because payment-service returned 503","trace_id":"tr-904","latency_ms":4700}
+{"timestamp":"2026-05-16T10:07:51Z","service":"payment-service","level":"WARN","message":"Retry queue depth above threshold: 1200","trace_id":"tr-905","latency_ms":2200}
+{"timestamp":"2026-05-16T10:09:33Z","service":"auth-service","level":"INFO","message":"Token verification successful","trace_id":"tr-906","latency_ms":42}
+

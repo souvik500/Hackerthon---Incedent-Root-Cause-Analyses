@@ -1,0 +1,24 @@
+### AI service health
+GET http://localhost:8000/health
+
+### Direct LangGraph AI service
+POST http://localhost:8000/analyze
+Content-Type: application/json
+
+{
+  "incident_id": "INC-1001",
+  "query": "Checkout latency and payment failures"
+}
+
+### Spring Boot facade health
+GET http://localhost:8080/api/incidents/health
+
+### Spring Boot facade incident analysis
+POST http://localhost:8080/api/incidents/analyze
+Content-Type: application/json
+
+{
+  "incidentId": "INC-1001",
+  "query": "Checkout latency and payment failures"
+}
+

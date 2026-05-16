@@ -1,0 +1,35 @@
+{
+  "incident_id": "INC-1001",
+  "severity": "SEV2",
+  "root_cause": "payment-service database connection pool exhaustion caused payment authorization timeouts, which made checkout-api return 503 errors.",
+  "confidence": 0.91,
+  "impacted_services": [
+    "checkout-api",
+    "payment-service"
+  ],
+  "evidence": [
+    "Alert INC-1001 reported Checkout error rate and latency spike on checkout-api.",
+    "payment-service WARN: Payment provider timeout after 2500ms",
+    "checkout-api ERROR: Payment authorization failed: upstream timeout",
+    "payment-service ERROR: Database connection pool exhausted for payment ledger",
+    "checkout-api ERROR: Checkout failed because payment-service returned 503",
+    "payment-service db_pool_usage_pct=99.2",
+    "payment-service provider_timeout_rate_pct=31.7"
+  ],
+  "recommended_actions": [
+    "Reduce payment retry concurrency to relieve pressure on the payment ledger database.",
+    "Restart or scale payment-service instances one at a time after checking database capacity.",
+    "Inspect recent payment-service deployment and slow ledger queries.",
+    "Notify payments on-call and customer support about checkout failures."
+  ],
+  "agent_trace": [
+    "alert_agent used lookup_alerts",
+    "log_agent used search_logs",
+    "metric_agent used query_metrics",
+    "runbook_agent used retrieve_runbook_context",
+    "root_cause_agent correlated logs, alerts, metrics, and RAG context",
+    "summary_agent produced structured output"
+  ],
+  "human_approval_required": false
+}
+

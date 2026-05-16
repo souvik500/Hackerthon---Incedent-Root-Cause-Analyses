@@ -1,0 +1,10 @@
+[
+  {"timestamp":"2026-05-16T10:00:00Z","service":"checkout-api","metric":"p95_latency_ms","value":220},
+  {"timestamp":"2026-05-16T10:05:00Z","service":"checkout-api","metric":"p95_latency_ms","value":4800},
+  {"timestamp":"2026-05-16T10:05:00Z","service":"checkout-api","metric":"error_rate_pct","value":18.4},
+  {"timestamp":"2026-05-16T10:05:00Z","service":"payment-service","metric":"db_pool_usage_pct","value":99.2},
+  {"timestamp":"2026-05-16T10:05:00Z","service":"payment-service","metric":"provider_timeout_rate_pct","value":31.7},
+  {"timestamp":"2026-05-16T10:05:00Z","service":"inventory-service","metric":"p95_latency_ms","value":105},
+  {"timestamp":"2026-05-16T10:05:00Z","service":"auth-service","metric":"p95_latency_ms","value":55}
+]
+

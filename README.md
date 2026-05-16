@@ -68,21 +68,6 @@ Swagger UI is available after Spring Boot starts:
 http://localhost:8080/swagger-ui.html
 ```
 
-## Try The Demo
-
-```bash
-curl -X POST http://localhost:8080/api/incidents/analyze ^
-  -H "Content-Type: application/json" ^
-  -d "{\"incidentId\":\"INC-1001\",\"query\":\"Checkout latency and payment failures\"}"
-```
-
-Direct Python service:
-
-```bash
-curl -X POST http://localhost:8000/analyze ^
-  -H "Content-Type: application/json" ^
-  -d "{\"incident_id\":\"INC-1001\",\"query\":\"Checkout latency and payment failures\"}"
-```
 
 You can also import `postman_collection.json` into Postman, or use `api-demo.http` with the VS Code REST Client extension.
 
